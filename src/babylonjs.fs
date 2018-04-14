@@ -1834,14 +1834,14 @@ module BABYLON =
     type Nullable<'T> =
         'T option
 
-    type float =
-        float
+    // type float =
+    //     float
 
     type double =
         float
 
-    type int =
-        float
+    // type int =
+    //     float
 
     type FloatArray =
         U2<ResizeArray<float>, Float32Array>
@@ -4021,10 +4021,10 @@ module BABYLON =
         type [<AllowNullLiteral>] AxesViewerStatic =
             [<Emit "new $0($1...)">] abstract Create: scene: Scene * ?scaleLines: float -> AxesViewer
 
-    module Debug =
+    // module Debug =
 
-        type [<AllowNullLiteral>] IExports =
-            abstract BoneAxesViewer: BoneAxesViewerStatic
+        // type [<AllowNullLiteral>] IExports =
+        //     abstract BoneAxesViewer: BoneAxesViewerStatic
 
         /// The BoneAxesViewer will attach 3 axes to a specific bone of a specific mesh
         type [<AllowNullLiteral>] BoneAxesViewer =
@@ -12665,7 +12665,7 @@ module BABYLON =
         abstract _parent: obj with get, set
         abstract _isDisposed: obj with get, set
         abstract _tmpVecs: obj with get, set
-        abstract _tmpQuat: obj with get, set
+        // abstract _tmpQuat: obj with get, set
         abstract isDisposed: bool
         abstract mass: float with get, set
         abstract friction: float with get, set
@@ -23427,6 +23427,11 @@ type [<AllowNullLiteral>] MouseEvent =
     abstract webkitMovementY: float with get, set
     abstract msMovementX: float with get, set
     abstract msMovementY: float with get, set
+
+type [<AllowNullLiteral>] MediaStreamConstraints = abstract something: int with get,set
+type [<AllowNullLiteral>] NavigatorUserMediaSuccessCallback = abstract something: int with get,set
+type [<AllowNullLiteral>] NavigatorUserMediaErrorCallback = abstract something: int with get,set
+
 
 type [<AllowNullLiteral>] Navigator =
     abstract mozGetVRDevices: (obj option -> obj option) with get, set
