@@ -3,9 +3,13 @@ module babylonFable
 open Fable.Core
 open Fable.Core.JsInterop
 open Fable.Import
+open babylonjs
+open Fable.Import.Browser
+open babylonjs
 
 let init() =
-    let canvas = Browser.document.getElementsByTagName_canvas().[0]
+    let canvas = Browser.document.getElementById "renderCanvas" :?> Fable.Import.Browser.HTMLCanvasElement   //.getElementById("renderCanvas")
+    let engine = Scene.getEngine () //Engine(canvas, true, { preserveDrawingBuffer = true; stencil = true})
     canvas.width <- 1000.
     canvas.height <- 800.
     let ctx = canvas.getContext_2d()
